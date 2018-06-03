@@ -1,0 +1,34 @@
+{
+  "name": "lens",
+  "version": "0.0.0",
+  "description": "WebSocket server for 21/23 games",
+  "main": "app/lens.js",
+  "scripts": {
+    "start": "node app/lens.js",
+    "debug": "node --inspect-brk app/lens.js",
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/21-23/lens.git"
+  },
+  "author": "21-23",
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/21-23/lens/issues"
+  },
+  "homepage": "https://github.com/21-23/lens#readme",
+  "devDependencies": {
+    "eslint": "4.19.1",
+    "eslint-config-airbnb-base": "12.1.0",
+    "eslint-plugin-import": "2.12.0"
+  },
+  "dependencies": {
+    "message-factory": "github:21-23/message-factory",
+    "nconf": "github:21-23/nconf",
+    "phoenix": "github:21-23/phoenix",
+    "uws": "10.148.0",
+    "winston": "2.4.2",
+    "winston-mongodb": "4.0.0-rc1"
+  }
+}

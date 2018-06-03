@@ -8,7 +8,8 @@ config.defaults({
         URL: 'ws://localhost:8888/',
     },
     AUTHREMOTE: {
-        URL: 'http://localhost:3000/',
+        VERIFY: 'http://localhost:3000/v1/verify',
+        PROFILES: 'http://localhost:3000/v1/profiles',
     },
     GUNSLINGERS: true,
     LOG: {

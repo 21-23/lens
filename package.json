@@ -20,13 +20,14 @@
   "homepage": "https://github.com/21-23/lens#readme",
   "devDependencies": {
     "eslint": "4.19.1",
-    "eslint-config-airbnb-base": "12.1.0",
-    "eslint-plugin-import": "2.12.0"
+    "eslint-config-2123": "github:21-23/eslint-config-2123"
   },
   "dependencies": {
     "message-factory": "github:21-23/message-factory",
     "nconf": "github:21-23/nconf",
     "phoenix": "github:21-23/phoenix",
+    "request": "^2.87.0",
+    "request-promise-native": "1.0.5",
     "uws": "10.148.0",
     "winston": "2.4.2",
     "winston-mongodb": "4.0.0-rc1"

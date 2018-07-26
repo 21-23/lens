@@ -3,6 +3,8 @@ const url = require('url');
 const request = require('request-promise-native');
 
 const config = require('./config');
+const { warn } = require('./logger');
+
 const { role, DEFAULT_PROFILE } = require('./helpers');
 
 let ENABLE_GUNSLINGERS = config.get('GUNSLINGERS');
@@ -29,7 +31,7 @@ function verifyGunslinger(upgradeReq) {
 }
 
 function verify(upgradeReq) {
-    const cookie = upgradeReq.headers.cookie;
+    const { cookie } = upgradeReq.headers;
 
     if (!cookie) {
         return Promise.reject({ reason: 'No cookie found in request' });

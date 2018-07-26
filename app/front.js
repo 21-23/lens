@@ -31,6 +31,7 @@ function handleConnection(ws, upgradeReq) {
 
         const connectionId = addToLobby(ws, participantId, sessionAlias, role, game);
 
+        // TODO: lobby should emit event about a new participant, back should listen to it
         back.sessionJoin(connectionId, participantId, sessionAlias, role, game);
     }).catch((err) => {
         warn('[lens]', 'New connection rejected', err);

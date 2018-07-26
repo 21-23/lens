@@ -1,6 +1,6 @@
 const WebSocketClient = require('uws');
 const createPhoenix = require('phoenix');
-const { parseMessage, arnaux, protocol: { frontService, stateService, initService, ui, identity } } = require('message-factory');
+const { parseMessage, arnaux, protocol: { wsService, stateService, initService, ui, identity } } = require('message-factory');
 
 const { getProfiles } = require('./auth');
 
@@ -11,8 +11,8 @@ const lobby = require('./lobby');
 const hall = require('./hall');
 const { rejectConnection, clearConnection, role } = require('./helpers');
 
-const { MESSAGE_NAME } = frontService;
-const { error, info } = logger;
+const { MESSAGE_NAME } = wsService;
+const { error, warn, info } = logger;
 let phoenix = null;
 
 // region send message helpers
